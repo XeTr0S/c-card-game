@@ -1,6 +1,8 @@
 #ifndef CARDS_H
 #define CARDS_H 
 
+#define MAX_CARDS 500
+
 typedef enum {
     RARITY_COMMON, 
     RARITY_RARE, 
@@ -56,6 +58,12 @@ typedef struct {
     Rarity rarity;
     Ability ability;
     char image_path[128];
-} Card;
+} CardStats;
+
+typedef struct {
+    int card_id;
+    Border border;
+    int quantity;
+} OwnedCard;
 
 #endif
